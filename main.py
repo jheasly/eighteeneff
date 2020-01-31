@@ -48,6 +48,7 @@ def get_plans(zipcode_plan_area_iter):
         silver_plans = []
         for plan_row in plans_reader:
             if set(zipcode_plan_area_iter).issubset(plan_row):
+                # get rate
                 silver_plans.append(plan_row[-2])
         if silver_plans:
                 # remove dupes
